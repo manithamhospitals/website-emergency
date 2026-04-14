@@ -1,1 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Emergency Care | Manitham Multispecialty Hospital</title>
+     <link rel="shortcut icon" href="assets/img/logo/fav-logo1.png" type="image/x-icon">
 
+     <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+     <link rel="stylesheet" href="assets/css/plugins/aos.css">
+     <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
+     <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
+     <link rel="stylesheet" href="assets/css/plugins/owlcarousel.min.css">
+     <link rel="stylesheet" href="assets/css/plugins/sidebar.css">
+     <link rel="stylesheet" href="assets/css/plugins/slick-slider.css">
+     <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+     <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.css">
+     <link rel="stylesheet" href="assets/css/main.css">
+     <script src="assets/js/plugins/jquery-3-7-1.min.js"></script>
+     <style>
+        .emergency-page {
+            background: linear-gradient(180deg, #f8f5ff 0%, #ffffff 42%, #fff8fb 100%);
+        }
+
+        .emergency-page .inner-header-section-area {
+            padding: 120px 0 88px;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(120deg, rgba(194, 24, 91, 0.88) 0%, rgba(122, 62, 255, 0.86) 100%),
+                url("assets/img/all-images/blog/manitham_emergency_700x460.jpg") center/cover no-repeat;
+        }
+
+        .emergency-page .inner-header-section-area::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.22), transparent 35%);
+        }
+
+        .emergency-page .hero-header {
+            position: relative;
+            z-index: 2;
+            max-width: 760px;
+        }
+
+        .emergency-page .hero-header .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.16);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .emergency-page .hero-header h1 {
+            color: #fff;
+            font-size: 60px;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            margin: 20px 0 18px;
+        }
+
+        .emergency-page .hero-header p {
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 20px;
+            line-height: 1.75;
+            max-width: 700px;
+        }
+
+        .emergency-hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 34px;
+        }
+
+        .emergency-hero-actions .emergency-call-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 24px;
+            border-radius: 999px;
+            background: #fff;
+            color: #c2185b;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .emergency-hero-actions .emergency-secondary-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: 999px;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .emergency-quickbar {
+            margin-top: -46px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .emergency-quickbar-card {
+            border-radius: 28px;
+            padding: 26px 28px;
+            background: #fff;
+            box-shadow: 0 22px 70px rgba(68, 22, 255, 0.10);
+        }
+
+        .emergency-quick-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .emergency-quick-item {
+            padding: 18px;
+            border-radius: 22px;
+            background: linear-gradient(180deg, #fff7fb 0%, #f7f2ff 100%);
+            border: 1px solid rgba(194, 24, 91, 0.08);
+        }
+
+        .emergency-quick-item h4 {
+            color: #4416ff;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .emergency-quick-item p {
+            color: #5f6672;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .emergency-section {
+            padding: 96px 0;
+        }
+
+        .emergency-section-title {
+            max-width: 700px;
+            margin-bottom: 44px;
+        }
+
+        .emergency-section-title .tag {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: rgba(68, 22, 255, 0.08);
+            color: #c2185b;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .emergency-section-title h2 {
+            color: #1f1b2d;
+            font-size: 46px;
+            line-height: 1.14;
+            margin: 20px 0 14px;
+            letter-spacing: -0.04em;
+        }
+
+        .emergency-section-title p {
+            color: #5f6672;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .emergency-alert-grid,
+        .emergency-process-grid,
+        .emergency-feature-grid,
+        .emergency-band-points {
+            display: grid;
+            gap: 24px;
+        }
+
+        .emergency-alert-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+        .emergency-alert-card,
+        .emergency-feature-card,
+        .emergency-form-card {
+            background: #fff;
+            border: 1px solid rgba(68, 22, 255, 0.08);
+            box-shadow: 0 18px 50px rgba(16, 24, 40, 0.06);
+        }
+
+        .emergency-alert-card,
+        .emergency-feature-card {
+            padding: 28px;
+            border-radius: 26px;
+            height: 100%;
+        }
+
+        .emergency-alert-card h3 {
+            color: #4416ff;
+            font-size: 28px;
+            margin-bottom: 14px;
+        }
+
+        .emergency-alert-card p,
+        .emergency-feature-card p,
+        .emergency-overlay-note p,
+        .emergency-form-card p {
+            color: #5f6672;
+            line-height: 1.8;
+        }
+
+        .emergency-alert-card ul {
+            margin-top: 18px;
+        }
+
+        .emergency-alert-card ul li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            color: #31353d;
+            font-weight: 600;
+            line-height: 1.7;
+        }
+
+        .emergency-alert-card ul li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #c2185b 0%, #4416ff 100%);
+        }
+
+        .emergency-image-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px;
+            min-height: 100%;
+            box-shadow: 0 24px 70px rgba(194, 24, 91, 0.16);
+        }
+
+        .emergency-image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .emergency-overlay-note {
+            position: absolute;
+            left: 24px;
+            right: 24px;
+            bottom: 24px;
+            padding: 22px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+        }
+
+        .emergency-overlay-note h4 {
+            color: #c2185b;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .emergency-process-wrap {
+            border-radius: 34px;
+            background: linear-gradient(135deg, #2f195c 0%, #c2185b 100%);
+            padding: 40px;
+            color: #fff;
+            box-shadow: 0 30px 80px rgba(68, 22, 255, 0.18);
+        }
+
+        .emergency-process-wrap h2,
+        .emergency-process-wrap p,
+        .emergency-process-wrap h3 {
+            color: #fff;
+        }
+
+        .emergency-process-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            margin-top: 30px;
+            gap: 18px;
+        }
+
+        .emergency-process-card {
+            border-radius: 24px;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .emergency-process-step {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #fff;
+            color: #c2185b;
+            font-size: 16px;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .emergency-process-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .emergency-process-card p {
+            color: rgba(255, 255, 255, 0.84);
+            line-height: 1.8;
+        }
+
+        .emergency-feature-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .emergency-feature-card .icon {
+            width: 58px;
+            height: 58px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(194, 24, 91, 0.12) 0%, rgba(68, 22, 255, 0.12) 100%);
+            color: #c2185b;
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+
+        .emergency-feature-card h3 {
+            color: #1f1b2d;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .emergency-band {
+            padding: 0 0 96px;
+        }
+
+        .emergency-band-card {
+            border-radius: 32px;
+            padding: 40px;
+            background: linear-gradient(135deg, #fff4f8 0%, #f5f0ff 100%);
+            border: 1px solid rgba(194, 24, 91, 0.08);
+        }
+
+        .emergency-band-points {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px 24px;
+            margin-top: 26px;
+        }
+
+        .emergency-band-points div {
+            padding: 16px 18px;
+            border-radius: 18px;
+            background: #fff;
+            color: #31353d;
+            font-weight: 700;
+            box-shadow: 0 12px 32px rgba(16, 24, 40, 0.04);
+        }
+
+        .emergency-form-card {
+            border-radius: 32px;
+            padding: 36px;
+        }
+
+        .emergency-form-card h3 {
+            color: #1f1b2d;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .emergency-form-card p {
+            margin-bottom: 24px;
+        }
+
+        .emergency-form-card .input-area input,
+        .emergency-form-card .input-area textarea {
+            width: 100%;
+            border-radius: 18px;
+            background: #f7f7fb;
+            border: 1px solid #ece8f7;
+            padding: 18px 20px;
+            color: #31353d;
+            margin-bottom: 16px;
+        }
+
+        .emergency-form-card .input-area textarea {
+            min-height: 150px;
+        }
+
+        .emergency-form-card .vl-btn4 {
+            border: none;
+        }
+
+        @media (max-width: 991px) {
+            .emergency-page .hero-header h1 {
+                font-size: 42px;
+            }
+
+            .emergency-quick-grid,
+            .emergency-alert-grid,
+            .emergency-process-grid,
+            .emergency-feature-grid,
+            .emergency-band-points {
+                grid-template-columns: 1fr;
+            }
+
+            .emergency-process-wrap,
+            .emergency-band-card,
+            .emergency-form-card {
+                padding: 28px;
+            }
+
+            .emergency-section-title h2 {
+                font-size: 34px;
+            }
+        }
+     </style>
+</head>
+<body class="emergency-page">
+
+<div class="cs_preloader">
+    <div class="cs_preloader_in">
+      <div class="cs_wave_first">
+        <svg enable-background="new 0 0 300.08 300.08" viewBox="0 0 300.08 300.08" xmlns="http://www.w3.org/2000/svg"><path d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z"></path></svg>
+      </div>
+      <div class="cs_wave_second">
+        <svg enable-background="new 0 0 300.08 300.08" viewBox="0 0 300.08 300.08" xmlns="http://www.w3.org/2000/svg"><path d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z"></path></svg>
+      </div>
+    </div>
+  </div>
+
+<div class="paginacontainer">
+     <div class="progress-wrap">
+       <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+       </svg>
+     </div>
+   </div>
+
+<div data-shared-layout="header"></div>
+
+<div class="inner-header-section-area">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-10">
+        <div class="hero-header">
+          <div class="eyebrow">24x7 Emergency Care</div>
+          <h1 class="text-anime-style-1">Rapid Emergency Response When Every Minute Matters</h1>
+          <p>Immediate assessment, stabilization, trauma support, and critical care access for chest pain, stroke symptoms, breathlessness, accidents, bleeding, and other urgent medical emergencies.</p>
+          <div class="emergency-hero-actions">
+            <a href="tel:+918939030363" class="emergency-call-btn"><i class="fa-solid fa-phone-volume"></i> Call Emergency Desk</a>
+            <a href="#emergency-booking" class="emergency-secondary-btn"><i class="fa-solid fa-calendar-check"></i> Request Immediate Callback</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="emergency-quickbar">
+  <div class="container">
+    <div class="emergency-quickbar-card">
+      <div class="emergency-quick-grid">
+        <div class="emergency-quick-item">
+          <h4>24x7 Triage</h4>
+          <p>Fast prioritization and clinical screening the moment a patient arrives.</p>
+        </div>
+        <div class="emergency-quick-item">
+          <h4>Critical Response</h4>
+          <p>Rapid intervention for trauma, breathing distress, cardiac symptoms, and stroke warning signs.</p>
+        </div>
+        <div class="emergency-quick-item">
+          <h4>Immediate Support</h4>
+          <p>Oxygen, monitoring, stabilization, and early treatment without avoidable delay.</p>
+        </div>
+        <div class="emergency-quick-item">
+          <h4>Specialist Coordination</h4>
+          <p>Quick escalation to the right internal team when critical care decisions are needed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="emergency-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="emergency-section-title">
+          <div class="tag">Know The Signs</div>
+          <h2>Do Not Wait If These Emergency Symptoms Appear</h2>
+          <p>Some conditions can worsen in minutes. Early arrival helps our team assess quickly, stabilize sooner, and reduce the risk of complications.</p>
+        </div>
+        <div class="emergency-alert-grid">
+          <div class="emergency-alert-card">
+            <h3>Life-Threatening Symptoms</h3>
+            <p>Immediate emergency support is strongly advised if a patient develops sudden or severe warning signs.</p>
+            <ul>
+              <li>Chest pain, pressure, or suspected heart attack symptoms</li>
+              <li>Sudden breathlessness, wheezing, or severe asthma distress</li>
+              <li>Loss of consciousness, confusion, seizures, or collapse</li>
+              <li>Stroke symptoms such as facial droop, weakness, or speech difficulty</li>
+            </ul>
+          </div>
+          <div class="emergency-alert-card">
+            <h3>Urgent Injury Or Trauma</h3>
+            <p>Accidents and injuries often need rapid evaluation even when the full damage is not obvious at first.</p>
+            <ul>
+              <li>Road traffic injuries or major falls</li>
+              <li>Uncontrolled bleeding or deep wounds</li>
+              <li>Head injury, fractures, or severe limb pain</li>
+              <li>High fever with dehydration, persistent vomiting, or severe weakness</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="emergency-image-card" data-aos="fade-left" data-aos-duration="900">
+          <img src="assets/img/all-images/blog/Emergency trauma care W1-1_0.png" alt="Emergency trauma care at Manitham Hospital">
+          <div class="emergency-overlay-note">
+            <h4>Emergency First. Paperwork Next.</h4>
+            <p>Our focus is rapid patient assessment and stabilization first, followed by streamlined admission and coordination.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="emergency-section pt-0">
+  <div class="container">
+    <div class="emergency-process-wrap">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h2 class="text-anime-style-3">How Our Emergency Flow Works</h2>
+          <p>We designed the page around what patients and families actually need to know during urgent situations: what happens first, how care moves quickly, and where to reach us right away.</p>
+        </div>
+      </div>
+      <div class="emergency-process-grid">
+        <div class="emergency-process-card">
+          <div class="emergency-process-step">01</div>
+          <h3>Rapid Triage</h3>
+          <p>Symptoms are checked immediately to identify the severity and prioritize care without delay.</p>
+        </div>
+        <div class="emergency-process-card">
+          <div class="emergency-process-step">02</div>
+          <h3>Immediate Stabilization</h3>
+          <p>Airway, breathing, circulation, pain, bleeding, and vitals are managed first to secure the patient.</p>
+        </div>
+        <div class="emergency-process-card">
+          <div class="emergency-process-step">03</div>
+          <h3>Diagnostic Support</h3>
+          <p>Emergency imaging, tests, and clinical evaluation help our team move from suspicion to action quickly.</p>
+        </div>
+        <div class="emergency-process-card">
+          <div class="emergency-process-step">04</div>
+          <h3>Definitive Care</h3>
+          <p>Patients are treated, monitored, admitted, or referred for higher-level intervention depending on need.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="emergency-section">
+  <div class="container">
+    <div class="emergency-section-title text-center m-auto">
+      <div class="tag">Emergency Strengths</div>
+      <h2>Built For Urgent Decisions, Fast Action, And Coordinated Care</h2>
+      <p>Instead of a blog-style layout, this page now focuses on emergency readiness, access, and patient trust.</p>
+    </div>
+    <div class="emergency-feature-grid">
+      <div class="emergency-feature-card">
+        <div class="icon"><i class="fa-solid fa-heart-pulse"></i></div>
+        <h3>Cardiac And Stroke Readiness</h3>
+        <p>Rapid attention to chest pain, palpitations, sudden weakness, altered speech, and other time-sensitive emergencies.</p>
+      </div>
+      <div class="emergency-feature-card">
+        <div class="icon"><i class="fa-solid fa-truck-medical"></i></div>
+        <h3>Trauma And Injury Support</h3>
+        <p>Structured evaluation for road accidents, fractures, bleeding injuries, head trauma, and acute pain episodes.</p>
+      </div>
+      <div class="emergency-feature-card">
+        <div class="icon"><i class="fa-solid fa-bed-pulse"></i></div>
+        <h3>Observation And Critical Monitoring</h3>
+        <p>Continuous monitoring and escalation for unstable patients who need close observation and critical care support.</p>
+      </div>
+      <div class="emergency-feature-card">
+        <div class="icon"><i class="fa-solid fa-user-doctor"></i></div>
+        <h3>Fast Clinical Coordination</h3>
+        <p>Internal coordination with the right specialists for urgent intervention, admission planning, and follow-up direction.</p>
+      </div>
+      <div class="emergency-feature-card">
+        <div class="icon"><i class="fa-solid fa-lungs"></i></div>
+        <h3>Breathing And Fever Emergencies</h3>
+        <p>Care pathways for severe fever, oxygen desaturation, asthma attacks, dehydration, infection concerns, and acute respiratory distress.</p>
+      </div>
+      <div class="emergency-feature-card">
+        <div class="icon"><i class="fa-solid fa-shield-heart"></i></div>
+        <h3>Family Communication</h3>
+        <p>Calm, structured updates for attendants while the team focuses on stabilization, treatment, and next-step decisions.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="emergency-band">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <div class="emergency-band-card">
+          <div class="tag">Why Families Choose Us</div>
+          <h2 class="mt-3">An Emergency Page Should Feel Reassuring, Direct, And Action-Oriented</h2>
+          <p class="mt-3">This redesign avoids the old blog-detail feel and brings the page closer to what emergency visitors actually need: urgency, trust, and a clear next step.</p>
+          <div class="emergency-band-points">
+            <div>Clear emergency-first messaging</div>
+            <div>Visible 24x7 response positioning</div>
+            <div>Better symptom-based guidance</div>
+            <div>Stronger facility and care explanation</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" id="emergency-booking">
+        <div class="emergency-form-card">
+          <h3>Request Emergency Callback</h3>
+          <p>Share the patient details and concern. Our team can connect quickly and guide the next immediate step.</p>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="input-area">
+                <input type="text" id="patientName" placeholder="Patient Name">
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="input-area">
+                <input type="tel" id="contactNumber" placeholder="Contact Number">
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="input-area">
+                <input type="date" id="appointmentDate">
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="input-area">
+                <textarea id="concern" placeholder="Describe the emergency concern"></textarea>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="input-area">
+                <button type="button" onclick="showAppointmentToast()" class="vl-btn4">Request Callback</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta4-section-area" style="background-image: url(assets/img/all-images/bg/bg5.png); background-position: center; background-size: cover; background-repeat: no-repeat;">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-5">
+        <div class="cta-content-area heading1">
+          <h2 class="text-anime-style-3">Need Immediate Help Right Now?</h2>
+          <div class="space16"></div>
+          <p data-aos="fade-left" data-aos-duration="900">Call our emergency support line for urgent guidance, arrival coordination, and immediate assistance.</p>
+          <div class="space24"></div>
+          <div class="btn-area1">
+            <a href="tel:+918939030363" class="vl-btn4">Call Emergency Desk <span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.25C5.06294 0.25 0.25 5.06294 0.25 11C0.25 16.9371 5.06294 21.75 11 21.75C16.9371 21.75 21.75 16.9371 21.75 11C21.75 5.06294 16.9371 0.25 11 0.25ZM10 7C9.5955 7 9.2309 7.24364 9.0761 7.61732C8.92134 7.99099 9.0069 8.42111 9.2929 8.70711L10.5858 10L7.29289 13.2929C6.90237 13.6834 6.90237 14.3166 7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L12 11.4142L13.2929 12.7071C13.5789 12.9931 14.009 13.0787 14.3827 12.9239C14.7564 12.7691 15 12.4045 15 12V8C15 7.44772 14.5523 7 14 7H10Z" fill="white"/></svg></span></a>
+            <a href="tel:+918939030363" class="phone"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><g clip-path="url(#clip0_5825_4343M)"><path d="M4.32688 1.17598C4.79912 1.27359 5.1752 1.59087 5.40887 2.01006L6.15321 3.34544C6.42738 3.83727 6.65811 4.25117 6.80878 4.61098C6.96862 4.99266 7.06355 5.36904 7.02016 5.78518C6.97676 6.20131 6.80622 6.55001 6.57107 6.8905C6.3494 7.21148 6.03823 7.56888 5.66848 7.99356L4.57431 9.25038C4.37824 9.47563 4.2802 9.58821 4.27124 9.72896C4.26228 9.86971 4.34263 9.98996 4.50333 10.2304C5.87299 12.2796 7.71894 14.1262 9.76983 15.497C10.0103 15.6577 10.1305 15.738 10.2712 15.7291C10.412 15.7201 10.5247 15.6221 10.7498 15.426L12.0067 14.3318C12.4314 13.962 12.7888 13.6509 13.1098 13.4292C13.4502 13.194 13.799 13.0235 14.2151 12.9801C14.6312 12.9367 15.0077 13.0317 15.3893 13.1915C15.7491 13.3422 16.163 13.5729 16.6547 13.847L17.9902 14.5915C18.4094 14.8251 18.7267 15.2012 18.8243 15.6734C18.9229 16.1505 18.7775 16.6302 18.4562 17.0244C17.2904 18.4547 15.4227 19.3654 13.4633 18.9701C12.259 18.7272 11.0707 18.3225 9.63342 17.4982C6.74558 15.842 4.15636 13.2514 2.50212 10.367C1.67786 8.92963 1.2731 7.74134 1.03015 6.53696C0.634898 4.5776 1.54559 2.70987 2.9759 1.54412C3.37009 1.22284 3.84971 1.07736 4.32688 1.17598Z" fill="#02015A"/><path fill-rule="evenodd" clip-rule="evenodd" d="M11.3062 1.54C11.4337 1.0978 11.8957 0.842779 12.3379 0.970388C15.5607 1.90041 18.099 4.43862 19.0292 7.66132C19.1567 8.1035 18.9017 8.56545 18.4596 8.69304C18.0174 8.8207 17.5554 8.5657 17.4278 8.1235C16.6565 5.45101 14.5483 3.34295 11.8757 2.57171C11.4336 2.4441 11.1786 1.98219 11.3062 1.54ZM10.7947 5.47187C10.9747 5.04825 11.4639 4.85066 11.8876 5.03055C13.2723 5.6186 14.381 6.72725 14.969 8.11199C15.1489 8.53562 14.9513 9.02487 14.5277 9.20479C14.1041 9.38462 13.6148 9.18704 13.4349 8.76345C13.0157 7.77614 12.2234 6.9839 11.2361 6.56463C10.8125 6.38474 10.6149 5.8955 10.7947 5.47187Z" fill="#02015A"/></g><defs><clipPath id="clip0_5825_4343M"><rect width="20" height="20" fill="white"/></clipPath></defs></svg>+91 8939030363</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3"></div>
+      <div class="col-lg-4">
+        <div class="cta-circle-area">
+          <div class="bg1">
+            <img src="assets/img/all-images/bg/cta-bg1.png" alt="" class="cta-bg1">
+          </div>
+          <div class="img1">
+            <img src="assets/img/all-images/cta/do.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div data-shared-layout="footer"></div>
+
+<script src="assets/js/plugins/bootstrap.min.js"></script>
+<script src="assets/js/plugins/fontawesome.js"></script>
+<script src="assets/js/plugins/aos.js"></script>
+<script src="assets/js/plugins/counter.js"></script>
+<script src="assets/js/plugins/gsap.min.js"></script>
+<script src="assets/js/plugins/ScrollTrigger.min.js"></script>
+<script src="assets/js/plugins/Splitetext.js"></script>
+<script src="assets/js/plugins/SmoothScroll.js"></script>
+<script src="assets/js/plugins/sidebar.js"></script>
+<script src="assets/js/plugins/magnific-popup.js"></script>
+<script src="assets/js/plugins/mobilemenu.js"></script>
+<script src="assets/js/plugins/owlcarousel.min.js"></script>
+<script src="assets/js/plugins/nice-select.js"></script>
+<script src="assets/js/plugins/waypoints.js"></script>
+<script src="assets/js/plugins/slick-slider.js"></script>
+<script src="assets/js/plugins/circle-progress.js"></script>
+<script src="assets/js/plugins/swiper.js"></script>
+<script src="assets/js/shared-layout.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+function showAppointmentToast() {
+    Swal.fire({
+        icon: 'success',
+        title: 'Callback Requested Successfully',
+        text: 'Our team will reach out shortly.',
+        showConfirmButton: false,
+        timer: 2200
+    });
+
+    document.getElementById("patientName").value = "";
+    document.getElementById("contactNumber").value = "";
+    document.getElementById("appointmentDate").value = "";
+    document.getElementById("concern").value = "";
+}
+</script>
+
+</body>
+</html>
